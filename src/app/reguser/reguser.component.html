@@ -1,0 +1,40 @@
+<div class="register">
+  <form [formGroup]="registerForm" (ngSubmit)="registration()">
+    <div class="  register-top-grid">
+      <h3>Kullanıcı Bilgileri</h3>
+      <div class="mation">
+        <span>Kullanıcı Adı<label>*</label></span>
+        <input type="text" formControlName="id">
+
+        <span>İsim<label></label></span>
+        <input type="text" formControlName="name">
+
+        <span>Parola<label>*</label></span>
+        <input type="text" formControlName="password">
+
+        <span>Email<label>*</label></span>
+        <input type="text" formControlName="email">
+
+        <span>Cinsiyet<label>*</label></span>
+          <input type="radio" formControlName="gender" value="male">
+          <label for="male">Erkek</label><br>
+          <input type="radio"  formControlName="gender" value="female">
+          <label for="semale">Kadın</label><br>
+        <button type="submit" >Kaydet</button>
+
+
+      </div>
+
+    </div>
+
+  </form>
+  <div class="clearfix"> </div>
+  <div class="register-but">
+    <form>
+
+
+      <button routerLink="/login" type="button">Login'e geri dön</button>
+      <div class="clearfix"> </div>
+    </form>
+  </div>
+</div>

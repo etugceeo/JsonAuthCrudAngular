@@ -1,0 +1,160 @@
+<div class="container-mid">
+    <main class="table">
+        <section class="table_header">
+            <!-- <h1>Kullanıcılar</h1> -->
+            <button class="add-user" type="button" (click)="showDialogAdd()">+kullanıcı</button>
+        </section>
+        <section class="table_body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kullanıcı Adı</th>
+                        <th>İsim</th>
+                        <th>Parola</th>
+                        <th>email</th>
+                        <th>Cinsiyet</th>
+                        <th>Rol</th>
+                        <th>Aktif</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of allusers">
+                        <td data-title="Kullanıcı Adı">{{item.id}}</td>
+                        <td data-title="İsim">{{item.name}}</td>
+                        <td data-title="Parola">{{item.password}}</td>
+                        <td data-title="email">{{item.email}}</td>
+                        <td data-title="Cinsiyet">{{item.gender}}</td>
+                        <td data-title="Rol">{{item.role}}</td>
+                        <td data-title="Aktif">
+                            <p class="satus rol">{{item.isActive}}</p>
+                        </td>
+                        <td data-title="İşlem" class="islem-dialog">
+                            <button type="button" class="islem-dbutton-edit" (click)="showDialogEdit(item.id)">düzenle<i
+                                    class="fa-sharp fa-regular fa-square-pen"></i></button>
+                            <button class="islem-dbutton-del" type="button"
+                                (click)="showDialogDel(item.id)">sil</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<app-modal [show]="isShowDel" [perDelId]="userDelId">
+    <div class="cont-dialog-g">
+        <div class="title-del">kullanıcı sil</div>
+        <div class="cont-dialog-del">
+            <div class="del-dialog-content">
+                <p>'{{formdata.name}}' adlı kullanıcıyı silmek istiyor musunuz?</p>
+            </div>
+            <div class="b-dialog-del">
+                <input type="button" (click)="closeModalDel()" (click)="deleteUser(userDelId)" value="sil">
+                <input type="button" (click)="closeModalDel()" value="vazgeç">
+            </div>
+        </div>
+    </div>
+</app-modal>
+
+<app-modal [show]="isShowEdit">
+    <div class="cont-dialog-g">
+        <div class="title">Kullanıcı Düzenle</div>
+        <div class="cont-dialog">
+            <form action="#" class="form-dialog">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Ad Soyad</span>
+                        <input type="text" name="name" [(ngModel)]="formdata.name" placeholder="İsim ve soyisim giriniz"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Kullanıcı Adı</span>
+                        <input type="text" name="id" [(ngModel)]="formdata.id" placeholder="Kullanıcı adı giriniz."
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Parola</span>
+                        <input type="text" name="password" [(ngModel)]="formdata.password" placeholder="Parola giriniz"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" name="email" [(ngModel)]="formdata.email" placeholder="Email giriniz"
+                            required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" [(ngModel)]="formdata.gender" id="dot-1" value="kadın">
+                    <input type="radio" name="gender" [(ngModel)]="formdata.gender" id="dot-2" value="erkek">
+                    <span class="gender-title">Cinsiyet</span>
+                    <div class="gen-category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                    </div>
+                </div>
+                <input type="hidden" name="isActive" value="false">
+                <div class="b-dialog">
+                    <input type="button" (click)="closeModalEdit()" (click)="editUser()" value="kaydet">
+                    <input type="button" (click)="closeModalEdit()" value="vazgeç">
+                </div>
+            </form>
+        </div>
+    </div>
+</app-modal>
+<app-modal [show]="isShowAdd">
+    <div class="cont-dialog-g">
+        <div class="title">Kullanıcı Ekle</div>
+        <div class="cont-dialog">
+            <form action="#" class="form-dialog" id="dialog-add-user">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Ad Soyad</span>
+                        <input type="text" name="name" [(ngModel)]="formdata.name" placeholder="İsim ve soyisim giriniz"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Kullanıcı Adı</span>
+                        <input type="text" name="id" [(ngModel)]="formdata.id" placeholder="Kullanıcı adı giriniz."
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Parola</span>
+                        <input type="text" name="password" [(ngModel)]="formdata.password" placeholder="Parola giriniz"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" name="email" [(ngModel)]="formdata.email" placeholder="Email giriniz"
+                            required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" [(ngModel)]="formdata.gender" id="dot-1" value="kadın">
+                    <input type="radio" name="gender" [(ngModel)]="formdata.gender" id="dot-2" value="erkek">
+                    <span class="gender-title">Cinsiyet</span>
+                    <div class="gen-category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                    </div>
+                </div>
+                <input type="hidden" name="isActive" value="false">
+                <div class="b-dialog">
+                    <input type="button" (click)="closeModalAdd()" (click)="createUser()" value="kaydet">
+                    <input type="button" (click)="closeModalAdd()" value="vazgeç">
+                </div>
+            </form>
+        </div>
+    </div>
+</app-modal>

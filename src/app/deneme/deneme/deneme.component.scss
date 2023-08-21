@@ -1,0 +1,477 @@
+/* 
+*{
+    margin : 0;
+    padding: 0;
+
+    font-family:sans-serif;
+}
+body {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(images/html_table.jpg) center/cover;
+    
+}
+
+style
+body{
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+*/
+.container-mid {
+    display: flex;
+    width: 100%;
+    min-height: 43rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+
+
+}
+
+main.table {
+    //width: 82vw;
+    width: 100%;
+    min-height: 41rem;
+    //min-height: 90%;
+    //height: 90vh;
+    //background-color: #fff5; //transparent
+    background-color: white;
+    //background-filter: blur(7px); kapsayıcı alanında backgroun image olsaydı
+    box-shadow: 0 .4rem .8rem #0005;
+    //border-radius: .8rem;
+    overflow: hidden;
+
+}
+
+.table_header {
+    width: 100%;
+    height: 8%;
+    //background-color: #fff4;
+    background-color: #fff;
+    opacity: 0.7;
+    padding: .6rem 1rem;
+    color: white;
+    //display: flex;
+    
+}
+
+.table_body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto; //beyaz güzküyor
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+}
+
+td img {
+    //İkinci td resim vardı
+    width: 36 px;
+    height: 36 px;
+    margin-right: .5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+table,
+th,
+td {
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.add-user {
+    background-color: #0827f6f9;
+    font-size: 1rem;
+    color: white;
+    padding: 0.4rem 0.6rem;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    //display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: none;
+
+}
+
+.add-user:hover {
+    opacity:0.8;
+    //background-color: #57abe6;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    //left: 0;
+    //background-color: #d5d1defe;
+    background-color: #e5dbff;
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr:hover {
+    background-color: #fff6;
+}
+
+.status {
+
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.rol {
+    //aktif
+    background-color: #86e49d;
+    color: #006b21;
+    //#6FCAEA  skybulu
+}
+
+//pasif
+status.pasif {
+    background-color: #d893a3;
+    color: #b30021;
+
+}
+
+.islem-dialog {
+    display: flex;
+}
+
+.islem-dialog button {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.islem-dialog .islem-dbutton-edit {
+    color: #006b21;
+    padding: 2px 3px;
+}
+.islem-dialog .islem-dbutton-del{
+    margin-left: 3px;
+    padding: 2px 3px;
+    color: red;
+}
+.islem-dialog button :hover {
+    background-color: #9a9696;
+}
+
+@media (max-width: 1000px) {
+
+    // td:not(:first-of-type){
+    //     min-width: 12.1 rem;
+    // }
+    td {
+        font-size: 12px;
+    }
+
+    th {
+        font-size: 14px;
+    }
+}
+
+//modal ekle
+/*
+*{
+    margin:0;
+    padding: 0 ;
+    box-sizing: borderbox;
+    font-family: 'Poppins',sans-serif;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+
+}
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+  }
+*/
+.con.b-dialog-g{
+    width:100%;
+    display: flex;
+    border-radius: 5px;
+}
+.cont-dialog {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 500px;
+    background-color:#e5dbff;
+    justify-content: center;
+    padding: 15px 30px;
+    //margin-bottom: 10px;
+}
+.title-del {
+    font-size: 10px;
+    font-weight: 500px;
+    background-color:#e5dbff;
+    color:#e5dbff;
+    justify-content: center;
+    padding: 15px 30px;
+    //margin-bottom: 10px;;
+}
+// .cont-dialog .title::before {
+//     content: '';
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 3px;
+//     width: 30px;
+//     background: #9b59b6;
+
+// }
+
+.cont-dialog form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.user-details .input-box .details {
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    //border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b59b6;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .gen-category {
+    display: flex;
+    width: 45%;
+    margin: 14px 0;
+    justify-content: space-between;
+
+}
+
+.gender-details .gen-category label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .gen-category .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3 ease;
+}
+
+#dot-1:checked~.gen-category label .one,
+#dot-2:checked~.gen-category label .two {
+    border-color: #d9d9d9;
+    background: #9b59b6;
+
+}
+// .gen-category label{
+//     display: left;
+// }
+
+.form-dialog input[type="radio"] {
+    display: none;
+}
+
+.form-dialog .b-dialog {
+    height: 45px;
+    margin: 45px 0;
+}
+
+.form-dialog .b-dialog input {
+    height: 80%;
+    //width: 100%;
+    float: right;
+    display: inline-block;
+    padding: 0px 10px;
+    margin-right: 4px;
+    outline: none;
+    color: #fff;
+    border-radius: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    //background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background-color:#8533ff;
+    border:none;
+}
+
+.form-dialog .b-dialog input:hover {
+    //background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    background-color:#6837b3; 
+
+}
+.cont-dialog-del {
+    //max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px 40px 30px;
+    display: block;
+    
+}
+.del-dialog-content {
+    min-height: 85px;
+    display: flex;
+
+    
+}
+b-dialog-del {
+    min-height: 90px;
+    margin-top: 15px;
+    display: block;
+    margin-bottom: 18px;
+   
+}
+.b-dialog-del input {
+    float: right;
+    display: inline-block;
+    padding: 4px 6px;
+    margin-right: 4px;
+    outline: none;
+    color: #fff;
+    border-radius: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    //background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background-color:#8533ff;
+    border:none;
+    
+}
+@media (max-width: 584px){
+    .cont-dialog{
+        max-width: 1000px;
+    }
+    .cont-dialog-del{
+        //max-width: 700px;
+        //height: 50%;
+        max-width: 1000px;
+    }
+    .form-dialog .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+        //display: block;
+    }
+    .b-dialog input{
+        width: 100%;
+        margin-bottom: 5px;
+        //height: 100%;
+    }
+    .b-dialog-del{
+        height: 60%;
+    }
+    .b-dialog-del input{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .del-dialog-content{
+        height: 50%;
+    }
+
+    .cont-dialog .form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}

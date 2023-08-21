@@ -1,0 +1,21 @@
+.register{
+	width: 70%;
+	float: right;
+}
+
+
+.register-top-grid span, .register-bottom-grid span {
+	color:#555;
+	font-size: 0.9em;
+	padding-bottom: 0.2em;
+	display: block;
+	text-transform: uppercase;
+}
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+	border: 1px solid #EEE;
+	outline-color:#FF5B36;
+	width: 85%;
+	font-size: 1em;
+	padding: 0.5em;
+	margin: 0.5em 0;
+}

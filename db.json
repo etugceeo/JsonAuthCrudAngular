@@ -1,0 +1,86 @@
+{
+  "user": [
+    {
+      "id": "elif123",
+      "name": "Elif Tuğçe",
+      "password": "123",
+      "email": "elif@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "tugce123",
+      "name": "tuğçe",
+      "password": "123",
+      "email": "eto_file_x@hotmail.com",
+      "gender": "female",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "sfdfs",
+      "name": "ayşe",
+      "password": "sfdds",
+      "email": "fdds",
+      "gender": "kadın",
+      "role": "",
+      "isActive": ""
+    },
+    {
+      "id": "stdtse",
+      "name": "sdrftesd",
+      "password": "esrrse",
+      "email": "ser",
+      "gender": "erkek",
+      "role": "",
+      "isActive": ""
+    },
+    {
+      "id": "ds",
+      "name": "ceyda",
+      "password": "dsf",
+      "email": "fds",
+      "gender": "erkek",
+      "role": "",
+      "isActive": "true"
+    },
+    {
+      "id": "sdf",
+      "name": "fds",
+      "password": "dsf",
+      "email": "sf",
+      "gender": "kadın",
+      "role": "kullanıcı",
+      "isActive": "true"
+    },
+    {
+      "id": "tesdt",
+      "name": "test",
+      "password": "test",
+      "email": "test",
+      "gender": "kadın",
+      "role": "kullanıcı",
+      "isActive": "true"
+    },
+    {
+      "id": "dede",
+      "name": "dede",
+      "password": "ded",
+      "email": "dede",
+      "gender": "kadın",
+      "role": "kullanıcı",
+      "isActive": "true"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
